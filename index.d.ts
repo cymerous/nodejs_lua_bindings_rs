@@ -29,7 +29,7 @@ export type JsLuaEngine = Lua
 export class Lua {
   constructor()
   openLibs(): void
-  doString(script: string): STATUS
+  doString(script: string): number
   doFile(path: string): number
   pushString(value: string): string
   pushNumber(value: number): void
