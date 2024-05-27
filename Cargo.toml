@@ -1,0 +1,19 @@
+[package]
+edition = "2021"
+name = "nodejs_lua_bindings_rs"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "2.12.2", default-features = false, features = ["napi4"] }
+mlua = { version = "0.9.8", features = ["vendored", "lua54"]}
+napi-derive = "2.12.2"
+
+[build-dependencies]
+napi-build = "2.0.1"
+
+[profile.release]
+lto = true
+strip = "symbols"
