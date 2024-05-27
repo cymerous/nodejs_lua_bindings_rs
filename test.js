@@ -1,4 +1,4 @@
-const w = require("./nodejs_lua_bindings_rs");
+const w = require("./index");
 
 const l = new w.Lua();
 l.openLibs();
